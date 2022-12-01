@@ -1,0 +1,143 @@
+$bgColor: #393E46;
+$mainColor: #6D9886;
+$secColor: #F2E7D5;
+$thirdColor: #F7F7F7;
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: $bgColor;
+}
+
+.head{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: $mainColor;
+    border-bottom-left-radius:40px 40px;
+    border-bottom-right-radius: 40px 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.418);
+    .titulo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            color: $secColor;
+            font-size: 40px;
+            margin-bottom: 0;
+            text-shadow: 1px 1px rgb(122, 122, 122);
+        }
+        h2{
+            color: $secColor;
+            font-weight: 200;
+            text-shadow: 1px 1px rgb(122, 122, 122);
+        }
+    }
+}
+
+.instrucciones{
+    width: 100%;
+    text-align: center;
+    color: $mainColor;
+    h3{
+        font-weight: 200;
+        font-size: 24px;
+        text-shadow: 1px 1px rgb(32, 31, 31);
+
+    }    
+}
+
+.marcador{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    .puntos{
+        background-color: $secColor;
+        margin: auto;
+        width: 10%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 26px;
+        font-weight: 600;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-evenly; 
+    }
+    .nombres{
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        margin:auto;
+        position: absolute;
+        left:35%;
+        top:0%;
+        font-size: 16px;
+        color: $mainColor;
+        .nombreJugador{
+            border: solid 2px $secColor;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 10px;
+            margin-left: 60px;
+        }
+        .nombrePc{
+            border: solid 2px $secColor;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+    }
+}
+
+.funcionesArmas{
+    width: 100%;
+    text-align: center;
+    .elegiTuArma{
+        margin-top: 50px;
+        h3{
+            color: $mainColor;
+            font-weight: 400;
+            text-shadow: 1px 1px rgb(32, 31, 31);
+            font-size: 26px;
+        }
+        p{
+            color: $secColor;
+        }
+        button{
+            color: $thirdColor;
+            font-size: 36px;
+            border-radius: 10px;
+            border: none;
+            padding: 20px;
+            margin: 20px;
+            margin-top: 10px;
+            cursor:pointer;
+        }
+    }
+}
+
+.reinicio{
+    width: 100%;
+    text-align: center;
+    .btnReiniciar{
+        button{
+            padding: 16px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            background-color: $mainColor;
+            color: $secColor;
+            text-shadow: 1px 1px rgba(54, 53, 53, 0.363);
+            cursor: pointer;
+        }
+    }
+}

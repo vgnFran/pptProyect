@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra Papel o Tijera</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <section class="head">
+            <div class="titulo">
+                <h1>Piedra, Papel o Tijera</h1>
+                <h2>Con HTML, CSS Y JavaScript</h2>
+            </div>
+        </section>
+    </header>
+
+    <section>
+        <div class="instrucciones">
+            <h3>El primero en llegar a 5 puntos gana.</h3>
+        </div>
+    </section>
+
+    <section>
+        <div class="marcador">
+            <div class="puntos">
+                <span>0</span>
+                <span>-</span>
+                <span>0</span>
+            </div>
+            <div class="nombres">
+                <p class="nombreJugador">Jugador</p>
+                <p  class="nombrePc">Computadora</p>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="funcionesArmas">
+        <div class="elegiTuArma">
+            <h3>Elegi tu arma para el proximo turno<h3>
+            <div class="armas">
+                <button class="arma" id="piedra🪨">
+                    🪨
+                </button>
+                <button class="arma" id="papel📋">
+                    📋
+                </button>
+                <button class="arma" id="tijera✂️">
+                    ✂️
+                </button>
+            </div>
+
+            <div class="mensaje" id="mensaje">
+                <p>
+                    Usaste <span class="eleccionUsuario">papel📋</span>
+                </p>
+                <p>
+                    Y la computadora uso <span class="eleccionPC">piedra🪨</span>
+                </p>
+                <p id="ganaPunto">
+                    ¡Ganaste un punto! 🔥 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="reinicio">
+        <div class="btnReiniciar" id="reiniciar">
+            <button>Reiniciar Juego</button>
+        </div>
+    </section>
+
+
+
+    <section class="">
+
+    </section>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
