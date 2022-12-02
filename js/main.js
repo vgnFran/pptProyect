@@ -9,11 +9,13 @@ let mensaje= document.querySelector("#mensaje");
 let ganaPunto= document.querySelector("#ganaPunto");
 let eleccionUsuario =document.querySelector("#eleccionUsuario");
 let eleccionPc= document.querySelector("#eleccionPc");
-
+let btnReiniciar= document.querySelector("#reiniciar")
 let botonesArma = document.querySelectorAll(".arma");
 botonesArma.forEach (boton =>{
     boton.addEventListener("click", iniciarTurno);
 });
+
+btnReiniciar.addEventListener("click",reiniciarJuego);
 
 
 
@@ -81,11 +83,29 @@ function empate(){
  
 
 function terminaElJuego(puntosUsuario,puntosPc){
+    let ganador= false;
     if (puntosUsuario==5){
         instrucciones.innerText="🔥¡¡Ganaste el Juego!!🔥"
+        ganador= true;
     } else if(puntosPc==5){
         instrucciones.innerText="😭¡La Computadora gano el juego!😭"
+        ganador=true;
+    }
+
+    console.log(ganador)
+
+    if (ganador== true){
+        mensaje.classList.add("disabled")
+        btnReiniciar.classList.remove("disabled")
     }
 }
 
-function restart()
+function reiniciarJuego(){
+    marcadorUsuario.innerText=0;
+    marcadorPc.innerText=0;
+    puntosUsuario=0;
+    puntosPc=0;
+    instrucciones.innerText="El primero en llegar a 5 puntos gana.";
+    btnReiniciar.classList.add("disabled")
+    mensaje.classList.add("disabled")
+}
