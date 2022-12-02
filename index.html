@@ -21,7 +21,7 @@
     </header>
 
     <section>
-        <div class="instrucciones">
+        <div class="instrucciones" id="instrucciones">
             <h3>El primero en llegar a 5 puntos gana.</h3>
         </div>
     </section>
@@ -29,21 +29,21 @@
     <section>
         <div class="marcador">
             <div class="puntos">
-                <span>0</span>
+                <span id="marcadorUsuario">0</span>
                 <span>-</span>
-                <span>0</span>
+                <span id="marcadorPc">0</span>
             </div>
             <div class="nombres">
-                <p class="nombreJugador">Jugador</p>
-                <p  class="nombrePc">Computadora</p>
+                <p class="nombreJugador" id="puntosJugador">Jugador</p>
+                <p  class="nombrePc" id="puntosPC">Computadora</p>
             </div>
         </div>
         
     </section>
 
     <section class="funcionesArmas">
-        <div class="elegiTuArma">
-            <h3>Elegi tu arma para el proximo turno<h3>
+        <div class="elegiTuArma" >
+            <h3 id="elegiArma">Elegi tu arma para el proximo turno<h3>
             <div class="armas">
                 <button class="arma" id="piedra🪨">
                     🪨
@@ -56,12 +56,12 @@
                 </button>
             </div>
 
-            <div class="mensaje" id="mensaje">
+            <div class="mensaje disabled" id="mensaje">
                 <p>
-                    Usaste <span class="eleccionUsuario">papel📋</span>
+                    Usaste <span class="eleccionUsuario" id="eleccionUsuario">papel📋</span>
                 </p>
                 <p>
-                    Y la computadora uso <span class="eleccionPC">piedra🪨</span>
+                    Y la computadora uso <span class="eleccionPC" id="eleccionPc">piedra🪨</span>
                 </p>
                 <p id="ganaPunto">
                     ¡Ganaste un punto! 🔥 
