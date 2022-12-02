@@ -16,33 +16,6 @@ botonesArma.forEach (boton =>{
 });
 
 
-// function iniciarTurno(e){
-//     let eleccionUsuario= e.currentTarget.id;
-//     let eleccionPc= Math.floor(Math.random()*3);
-
-//     if(eleccionPc==0){
-//         eleccionPc="piedra🪨"
-//     }else if(eleccionPc==1){
-//         eleccionPc="papel📋"
-//     }else{
-//         eleccionPc="tijera✂️"
-//     }
-
-//     console.log("eleccion usuario " + eleccionUsuario);
-//     console.log("eleccion pc " +eleccionPc);
-
-
-//     if(eleccionUsuario=="piedra🪨" && eleccionPc=="tijera✂️" || eleccionUsuario=="tijera✂️" && eleccionPc=="papel📋" || eleccionUsuario=="papel📋" && eleccionPc=="piedra🪨"){
-//         console.log("ganaste")
-//     } else if(eleccionPc=="piedra🪨" && eleccionUsuario =="tijera✂️" || eleccionPc=="tijera✂️" && eleccionUsuario=="papel📋" || eleccionPc=="papel📋" && eleccionUsuario=="piedra🪨"){
-//         console.log("gano pc")
-//     }else{
-//         console.log("empate")
-//     }
-
-
-// }
-
 
 const elijeUsuario = (e)=> {
     let eleccionUsuario= e.currentTarget.id;
@@ -84,6 +57,7 @@ function iniciarTurno(e){
     eleccionUsuario.innerText=elijeUsuario(e);
     eleccionPc.innerText=elijePc();
 
+    terminaElJuego(puntosUsuario,puntosPc)
 
 }
 
@@ -104,6 +78,14 @@ function ganaPc(){
 function empate(){
     ganaPunto.innerText= "¡Empate!😯"
 }
+ 
 
+function terminaElJuego(puntosUsuario,puntosPc){
+    if (puntosUsuario==5){
+        instrucciones.innerText="🔥¡¡Ganaste el Juego!!🔥"
+    } else if(puntosPc==5){
+        instrucciones.innerText="😭¡La Computadora gano el juego!😭"
+    }
+}
 
-
+function restart()
